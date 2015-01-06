@@ -98,5 +98,55 @@ public class IntArrayWorker
       }
     }
   }
+  
+  public int getCount(int numberLookingFor)
+  {
+      int totalNumberLookingFor = 0;
+      for (int i = 0; i<matrix.length;i++)
+      {
+          for(int j = 0; j<matrix[0].length;j++)
+          {
+              if (matrix[i][j] == numberLookingFor)
+              {
+                  totalNumberLookingFor++;
+              }
+          }
+      }
+      return totalNumberLookingFor;
+  }
+  
+  public int getLargest()
+  {
+      int largest = 0;
+      for (int i = 0; i<matrix.length;i++)
+      {
+          for(int j = 0; j<matrix[0].length;j++)
+          {
+              if (matrix[i][j] > largest)
+              {
+                  largest = matrix[i][j];
+              }
+          }
+      }
+      return largest;
+  }
+  
+  public int getColTotal(int whichColumn)
+  {
+      int total = 0;
+      for (int row = 0; row<matrix.length;row++)
+      {
+          for(int col = 0; col<matrix[0].length;col++)
+          {
+              if (matrix[row][col] == matrix[row][whichColumn])
+              {
+                  total = total + matrix[row][col];
+              }
+          }
+      
+      }
+      return total;
+      
+  }
  
 }
