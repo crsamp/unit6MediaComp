@@ -26,7 +26,49 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  /** method to test mirrorVerticalRightToLeft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+      Picture caterpillar = new Picture("caterpillar.jpg");
+      caterpillar.explore();
+      caterpillar.mirrorVerticalRightToLeft();
+      caterpillar.explore();
+  }
+  /** method to test mirrorHorrizontal*/
+  public static void testMirrorHorrizontal()
+  {
+      Picture caterpillar = new Picture("caterpillar.jpg");
+      caterpillar.explore();
+      caterpillar.mirrorHorrizontal();
+      caterpillar.explore();
+  }
+  
+  /** method to test mirrorHorrizontalTopToBot */
+  public static void testMirrorHorrizontalTopToBot()
+  {
+      Picture caterpillar = new Picture("caterpillar.jpg");
+      caterpillar.explore();
+      caterpillar.mirrorHorrizontalTopToBot();
+      caterpillar.explore();
+  }
+  
+  /** method to test mirrorDiagonalLeftToRight */
+  public static void testMirrorDiagonalLeftToRight()
+  {
+      Picture caterpillar = new Picture("square_for_diag.png");
+      caterpillar.explore();
+      caterpillar.mirrorDiagonalLeftToRight();
+      caterpillar.explore();
+  }
+  /** method to test mirrorDiagonalRightToLeft */
+  public static void testMirrorDiagonalRightToLeft()
+  {
+      Picture caterpillar = new Picture("square_for_diag.png");
+      caterpillar.explore();
+      caterpillar.mirrorDiagonalRightToLeft();
+      caterpillar.explore();
   /** Method to test mirrorTemple */
+  }
   public static void testMirrorTemple()
   {
     Picture temple = new Picture("temple.jpg");
@@ -35,6 +77,54 @@ public class PictureTester
     temple.explore();
   }
   
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
+  }
+  
+  public static void testPurpleFilter()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.purpleFilter();
+    seagull.explore();
+  }
+  
+  public static void testNegateFilter()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.negateFilter();
+    seagull.explore();
+  }
+  
+  public static void testPurpleNegateFilter()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.negateFilter();
+    seagull.purpleFilter();
+    seagull.explore();
+  }
+  
+  public static void testGrayScale()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.grayScale();
+    seagull.explore();
+  }
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -63,9 +153,19 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    //testGrayscale();
+    testGrayScale();
     //testFixUnderwater();
-    //testMirrorVertical();
+    testMirrorVertical();
+    testMirrorVerticalRightToLeft();
+    testMirrorHorrizontal();
+    testMirrorHorrizontalTopToBot();
+    testMirrorDiagonalLeftToRight();
+    testMirrorDiagonalRightToLeft();
+    testMirrorArms();
+    testMirrorGull();
+    testPurpleFilter();
+    testNegateFilter();
+    testPurpleNegateFilter();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
