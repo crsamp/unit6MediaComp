@@ -125,6 +125,17 @@ public class PictureTester
     seagull.grayScale();
     seagull.explore();
   }
+  
+  public static void testCropAndCopy()
+  {
+      Picture picture1 = new Picture("seagull.jpg");
+      Picture picture2 = new Picture("caterpillar.jpg");
+      picture2.explore();
+      picture1.explore();
+      picture1.cropAndCopy(picture2,10,30,20,50,30,40);
+      picture2.explore();
+      picture1.explore();
+  }
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -166,6 +177,7 @@ public class PictureTester
     testPurpleFilter();
     testNegateFilter();
     testPurpleNegateFilter();
+    testCropAndCopy();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();

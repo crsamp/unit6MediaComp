@@ -370,6 +370,31 @@ public class Picture extends SimplePicture
           }
       }
   }
+
+  public void cropAndCopy(Picture sourcePicture, int startSourceRow, int endSourceRow,
+    int startSourceCol, int endSourceCol, int startDestRow, int startDestCol)
+  {
+      
+      int rowCount  = startDestRow;
+      int colCount = startDestCol;
+      Pixel thisPixel = null;
+      Pixel otherPixel = null;
+      Pixel[][] pixels = sourcePicture.getPixels2D();
+      Pixel[][] pixels2 = this.getPixels2D();
+      for(int row = startSourceRow; row<=endSourceRow;row++)
+      {
+          
+          for(int col = startSourceCol; col<=endSourceCol;col++)
+          {
+              thisPixel = pixels[row][col];
+              otherPixel = pixels2[rowCount][colCount];
+              otherPixel.setColor(thisPixel.getColor());
+              colCount++;
+          }
+          rowCount++;
+          colCount = startDestCol;
+      }
+  }
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
