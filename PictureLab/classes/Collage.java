@@ -45,6 +45,7 @@ public class Collage
             canvas.cropAndCopy(shark4,0,299,0,499,300,500);
             
             canvas.explore();
+            canvas.write("MyCollage.jpg");
         }
     }
     
